@@ -14,12 +14,12 @@ services:
 
   db:
     image: postgres:13
+    ports:
+      - "5432:5432"
     environment:
-      POSTGRES_USER: root
-      POSTGRES_PASSWORD: root
-      POSTGRES_DB: mydatabase
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
+      POSTGRES_USER: "root"
+      POSTGRES_PASSWORD: "root"
+      POSTGRES_DB: "mydatabase"
 
 volumes:
   postgres_data:
