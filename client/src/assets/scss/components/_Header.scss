@@ -1,0 +1,61 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  @extend %wrapper;
+  padding: 12px 0;
+
+  &__left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    padding: 10px 0;
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .line {
+      display: flex;
+      flex-direction: column;
+      height: 28px;
+      width: 2px;
+      background-color: $natural5;
+      border-radius: 2px;
+    }
+
+    .types {
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+      cursor: pointer;
+    }
+
+    .menu {
+    }
+
+    .bonus {
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    font-family: Suisse Intl;
+    font-size: 16px;
+    font-weight: 500;
+    color: $natural1;
+  }
+}
