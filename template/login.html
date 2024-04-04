@@ -1,0 +1,32 @@
+<h1>login now</h1>
+
+<style>
+    h3{
+        color: red;
+    }
+    a{
+        display: inline-block;
+        text-decoration: none;
+        padding: 10px;
+        background-color: rgb(172, 124, 124);
+        color: white;
+    }
+    a:hover{
+        background-color: rgb(65, 35, 35);
+    }
+</style>
+
+{% for message in messages %}
+    <h3>{{message}}</h3>
+{% endfor %}
+
+<form action="login" method="POST">
+    {% csrf_token %}
+    <p>Username</p>
+    <input type="text" name = "username">
+    <p>Password</p>
+    <input type="password" name="password" > <br>
+    <input type="submit"><br>
+    <a href="register"> Create new  account</a>
+
+</form>
