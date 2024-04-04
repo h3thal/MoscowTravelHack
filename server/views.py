@@ -5,7 +5,7 @@ from django.contrib import messages
 
 # Create your views here.
 def index(request):
-    return render (request, 'index.html')
+    return render (request, 'client/index.html')
 
 def register(request):
     if request.method == 'POST':
