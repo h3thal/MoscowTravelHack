@@ -1,57 +1,55 @@
-from django.shortcuts import render, redirect
-from django.http import HttpResponse
-from django.contrib.auth.models import User, auth
-from django.contrib import messages
+from rest_framework.response import Response
+from rest_framework.views import APIView
+from django.forms import model_to_dict
+from rest_framework import filters
+from rest_framework.filters import SearchFilter
+from django_filters.rest_framework import DjangoFilterBackend
+
+from rest_framework import generics
+from .models import tour
+from .serializer import tourSerializer
+
 
 # Create your views here.
-def index(request):
-    return render (request, 'client/index.html')
-
-def register(request):
-    if request.method == 'POST':
-        username=request.POST['username']
-        email = request.POST['email']
-        password = request.POST['password']
-        password2 = request.POST['password2']
-
-        if password == password2:  
-            if User.objects.filter(email=email).exists():
-                messages.info(request,'email  already exists')
-                return redirect ('register')
-            elif User.objects.filter(username=username).exists():
-                messages.info(request, 'Username already exists')
-                return redirect ('register')
-            else:
-                user= User.objects.create_user(username=username,email= email, password= password)
-                user.save()
-                return redirect ('login')
-        else:
-            messages.info(request, 'passwords are not the smae')
-            return redirect('register')
-    else:
-        return render(request, 'register.html')
+class tourAPIList(generics.ListAPIView):
+    serializer_class= tourSerializer
+    queryset = tour.objects.all()
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields=['id' , 'country','accomodation']
 
 
 
-def login(request):
-    if request.method =='POST':
-        username = request.POST['username']
-        password = request.POST['password']
+
+
+# class toursAPIview(APIView):
+#     def get(self, request):
+#         t = tours.objects.all()
+#         return Response({'title': toursSerializer(t,many=True).data})
+    
+#     def post(self, request):
+#         serializer = toursSerializer(data=request.data)
+#         serializer.is_valid(raise_exception=True)
+#         serializer.save()
+#         return Response({'post':serializer.data})
+
+#     def put(self, request, *args, **kwargs):
+#         pk = kwargs.get('pk',None)
+#         if not pk:
+#             return Response({"error" : "Method put is not allowed"})
         
-        user = auth.authenticate(username= username, password=password)
+#         try:
+#             instance= tours.objects.get(pk=pk)
+#         except:
+#             return Response({"error" : "obj doesnt exist"})
+        
+#         serializer = toursSerializer(data=request.data, instance = instance)
+#         serializer.is_valid(raise_exception=True)
 
-        if user is not None:
-            auth.login(request, user)
-            return redirect('/')
-        else:
-            messages.info(request, 'Invalid username or password')
-            return redirect('login')
-    else:
-        return render(request, 'login.html')
+#         serializer.save()
+#         return Response({"post":serializer})
+    # queryset=tours.objects.all()
+    # serializer_class=toursSerializer
 
-def logout(request):
-    auth.logout(request)
-    return redirect('/')
 
-def wintega(request):
-    return render(request,'wintega.html')
+
+
