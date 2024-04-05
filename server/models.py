@@ -24,13 +24,13 @@ class tour(models.Model):
 
 
     TRANS = [
-        (1,'Bus'),
-        (2,'Train'),
-        (3,'Plane'),
+        ('bus','Bus'),
+        ('train','Train'),
+        ('plane','Plane'),  
     ]
-    transportation = models.PositiveSmallIntegerField(choices=TRANS , blank=True)
+    transportation = models.CharField(choices=TRANS , blank=True)
 
-    cost_per_adult = models.PositiveIntegerField(null=True)
+    cost_per_adult = models.PositiveIntegerField(null=True) 
     cost_per_child = models.PositiveIntegerField(null=True)
 
     program_of_tour = models.CharField(blank=True)

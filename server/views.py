@@ -15,7 +15,7 @@ class tourAPIList(generics.ListAPIView):
     serializer_class= tourSerializer
     queryset = tour.objects.all()
     filter_backends = [DjangoFilterBackend]
-    filterset_fields=['id' , 'country','accomodation']
+    filterset_fields=['id' , 'country','accomodation','transportation']
 
 
 
