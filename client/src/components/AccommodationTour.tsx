@@ -3,6 +3,8 @@ import {memo} from "react";
 
 import testImg from '../assets/images/test.jpeg';
 import entirePlace from '../assets/svg/entire-place.svg';
+import {Pagination} from "swiper/modules";
+import 'swiper/css/pagination';
 
 const AccommodationTour = memo(() => {
   return (
@@ -10,7 +12,12 @@ const AccommodationTour = memo(() => {
       <h3 className={'accommodation-tour__title'}>Проживание во время тура</h3>
       <div className={'accommodation-tour__info'}>
         <div className={'album'}>
-          <Swiper slidesPerView={1} spaceBetween={10}>
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={10}
+            pagination
+            modules={[Pagination]}
+          >
             <SwiperSlide><img src={testImg} alt={'test'}/></SwiperSlide>
             <SwiperSlide><img src={testImg} alt={'test'}/></SwiperSlide>
             <SwiperSlide><img src={testImg} alt={'test'}/></SwiperSlide>

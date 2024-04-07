@@ -1,0 +1,25 @@
+.reservation {
+  @extend %wrapper;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+
+    .body {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+
+    }
+
+    .sidebar {
+      max-width: 392px;
+    }
+  }
+}

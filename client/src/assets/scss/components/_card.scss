@@ -12,6 +12,10 @@
     width: 100%;
     position: relative;
 
+    &:active {
+      cursor: grab;
+    }
+
     img {
       height: 220px;
       width: 100%;
@@ -153,10 +157,54 @@
       }
     }
 
+    .info {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      font-family: Suisse Intl;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px;
+
+
+      &__left {
+        display: flex;
+        flex-direction: column;
+        color: $natural1;
+      }
+
+      &__right {
+        display: flex;
+        flex-direction: column;
+        color: $success;
+      }
+    }
+
     .actions {
       display: flex;
       flex-direction: row;
+      justify-content: space-between;
       margin-top: 40px;
+
+      &:has(.tags) {
+        .button {
+          width: unset;
+          padding-inline: 35px;
+        }
+      }
+
+      .tags {
+        display: flex;
+        flex-direction: row;
+        gap: 4px;
+        font-family: Suisse Intl;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+        color: $natural1;
+      }
 
       .button {
         width: 100%;

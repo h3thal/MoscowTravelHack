@@ -19,7 +19,7 @@ const initState = {
   ]
 };
 
-export default (state = initState, action) => {
+export default (state = initState, action: any) => {
   switch (action.type) {
     default:
       return state;

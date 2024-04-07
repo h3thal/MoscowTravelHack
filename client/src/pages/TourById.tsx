@@ -16,6 +16,7 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import Review from "../components/Review.tsx";
 import SearchBar from "../components/SearchBar.tsx";
 import AccommodationTour from "../components/AccommodationTour.tsx";
+import Steps from "../components/Steps";
 
 const TourById = (): JSX.Element => {
   const params = useParams();
@@ -30,7 +31,9 @@ const TourById = (): JSX.Element => {
   }, [textInput]);
   return (
     <div className={'tour'}>
+      <Steps/>
       <div className={'tour__header'}>
+
         <div className={'tour__header-left'}>
           <Title title={'Две столицы: Москва — Санкт-Петербург «Семейные каникулы»'}/>
           <div className={'footer'}>

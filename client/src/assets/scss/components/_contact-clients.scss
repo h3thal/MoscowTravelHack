@@ -1,0 +1,39 @@
+.contact-client {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-sizing: border-box;
+  padding: 16px;
+  border-radius: 16px;
+  background: $natural7;
+
+  &__title {
+    font-family: Proto Grotesk;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    color: $natural1;
+  }
+
+  &__subtitle {
+    font-family: Suisse Intl;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    color: $natural4;
+  }
+
+  &__inputs {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    width: 100%;
+    margin-top: 8px;
+
+    .input {
+      width: 100%;
+    }
+  }
+}

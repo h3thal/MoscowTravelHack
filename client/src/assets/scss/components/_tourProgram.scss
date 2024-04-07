@@ -1,4 +1,7 @@
 .tour-program {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 
   &__album {
     display: flex;

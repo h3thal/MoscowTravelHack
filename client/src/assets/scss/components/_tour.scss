@@ -1,5 +1,8 @@
 .tour {
   @extend %wrapper;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 
   &__header {
     display: flex;
@@ -76,6 +79,7 @@
   &__body {
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
     gap: 24px;
     width: 100%;
 
@@ -95,7 +99,8 @@
       display: flex;
       flex-direction: column;
       flex: 1 1 auto;
-      max-width: calc(100% - 288px);
+      max-width: calc(100% - 392px - 24px);
+      gap: 40px;
 
 
       &__description {
@@ -131,11 +136,15 @@
           max-width: calc(100% / 2 - 24px / 2);
         }
       }
+
+      .search-bar {
+        margin-bottom: 40px;
+      }
     }
 
 
     .sidebar {
-      width: 288px;
+      width: 392px;
       display: flex;
       flex-shrink: 0;
     }
@@ -154,4 +163,12 @@
     font-size: 14px;
     color: $natural4;
   }
+}
+
+.swiper-pagination-bullet-active {
+  background: $natural8;
+}
+
+.swiper-pagination-bullet {
+  background: var(--transparent-white-30, rgba(255, 255, 255, 0.30));;
 }

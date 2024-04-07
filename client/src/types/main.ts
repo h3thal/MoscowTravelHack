@@ -50,3 +50,13 @@ export type CheckboxProps = {
   title: string;
   onInput: FormEventHandler<HTMLInputElement>;
 }
+
+export type CardHotelsProps = {
+  title: string;
+  rating: number;
+  star: number;
+  onOpen: () => void;
+  parking?: boolean;
+  wifi?: boolean;
+  cafe?: boolean;
+}

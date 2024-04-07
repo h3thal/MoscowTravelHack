@@ -8,6 +8,7 @@ import TourCatalogue from "./pages/TourCatalogue.tsx";
 import {Provider} from "react-redux";
 import {store} from "./redux/store.ts";
 import RentCatalogue from "./pages/RentCatalogue.tsx";
+import Reservation from "./pages/Reservation.tsx";
 
 const RouterApp = (): JSX.Element => {
 
@@ -22,6 +23,7 @@ const RouterApp = (): JSX.Element => {
             <Route path={'/tour'} element={<TourById/>}/>
             <Route path={'/tour/:id'} element={<TourById/>}/>
             <Route path={'/rent/'} element={<RentCatalogue/>}/>
+            <Route path={'/reservation'} element={<Reservation/>}/>
           </Routes>
           <Footer/>
         </BrowserRouter>
