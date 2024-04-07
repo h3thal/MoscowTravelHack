@@ -12,11 +12,13 @@ def filing(file):
 def data_load():
     with open('static\data.json','r', encoding='utf-8') as f:
         data= json.load(f)
-    for record in data:
-        print (record)
-
-
-
+    for item in data:
+        tour = Product(
+            name=item['name'],
+            price=Decimal(item['price']),
+            description=item['description']
+        )
+    product.save()
 
 
 

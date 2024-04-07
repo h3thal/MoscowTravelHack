@@ -2,9 +2,9 @@ from django.db import models
 from django.contrib.postgres.fields import ArrayField
 
 def default_image():
-    return 'https://test.eclida.ru/files/noimg.png'
+    return '{https://test.eclida.ru/files/noimg.png}'
 def default_theme():
-    return 'No theme'
+    return '{No theme}'
 
 # Create your models here.
 class tour(models.Model):
@@ -19,7 +19,7 @@ class tour(models.Model):
 
     type = models.CharField(blank = False, default='Тур')
     themes = ArrayField(models.CharField(max_length=30, blank=True),size=8, default=default_theme)
-    images= ArrayField(models.CharField(max_length=500,blank=True),size=20,default=default_image)
+    images= ArrayField(models.CharField(max_length=500,blank=True),size=4,default=default_image)
 
     price = models.CharField(blank = False, default = 0)
     iscanbuy= models.BooleanField(blank =False, default = True)
@@ -28,6 +28,7 @@ class tour(models.Model):
     promo = models.BooleanField(default=False, blank=False)
     russpassRecomendation = models.BooleanField(blank = False, null = False, default=False)
     hasAudioGuide = models.BooleanField(blank = False, default = False)
+
 
 
 class hotel(models.Model):
@@ -46,16 +47,18 @@ class hotel(models.Model):
     stars = models.SmallIntegerField(blank=False,choices= HOTEL_STARS,default = 0)
     position= models.CharField(blank=False,default='')
     typeofhotel = models.CharField(blank=True, null=True,max_length=100)
+
     rating= models.FloatField(blank=True,null=True)
     popularity= models.FloatField(blank=True,null=True)
+
     price = models.CharField(blank = False, default = 0)
     distance_from_center = models.FloatField(blank=True,default=0)
+    images= ArrayField(models.CharField(max_length=500,blank=True),size=4,default=default_image)
 
     iswifi =models.BooleanField(blank=False, default=False)
     isparking= models.BooleanField(blank=False, default=False)
     ismeal= models.BooleanField(blank=False, default=False)
 
-    images= ArrayField(models.CharField(max_length=500,blank=True),size=4,default=default_image)
 
 
 

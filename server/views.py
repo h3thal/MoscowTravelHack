@@ -4,8 +4,8 @@ from rest_framework import filters
 from django_filters.rest_framework import DjangoFilterBackend
 
 from rest_framework import generics
-from .models import tour
-from .serializer import tourSerializer
+from .models import tour,hotel
+from .serializer import *
 from .function import filing
 
 
@@ -37,10 +37,43 @@ class customPagination(PageNumberPagination):
             'results' : data
         })
 
+class hotelAPIList(generics.ListAPIView):
+    serializer_class = hotelSerializer
+    queryset = hotel.objects.all()
+    pagination_class=customPagination
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        ordering = self.request.query_params.get('ordering', '')
+        if ordering:
+            if ordering == 'custom_order':
+                queryset = queryset.order_by('custom_order')
+            else:
+                queryset = queryset.order_by(ordering)
+        return queryset
+    
+
+class tourAPIOrdering(generics.ListAPIView):
+    serializer_class= tourSerializer
+    queryset = tour.objects.all()   
+    pagination_class=customPagination
+
+    
+
 class tourAPIList(generics.ListAPIView):
     serializer_class= tourSerializer
     queryset = tour.objects.all()   
     pagination_class=customPagination
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        ordering = self.request.query_params.get('ordering', '')
+        if ordering:
+            if ordering == 'custom_order':
+                queryset = queryset.order_by('custom_order')
+            else:
+                queryset = queryset.order_by(ordering)
+        return queryset
    
 
     
