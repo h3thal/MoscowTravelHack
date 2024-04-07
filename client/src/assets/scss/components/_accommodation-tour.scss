@@ -1,0 +1,114 @@
+.accommodation-tour {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    color: $natural1;
+    font-family: Proto Grotesk;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 36px;
+    margin-bottom: 24px;
+    border-radius: 12px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0px 12px 16px 0px rgba(0, 0, 0, 0.04);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid $natural5;
+    border-bottom: 0;
+
+    .album {
+      height: 185px;
+      width: 300px;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .about-hotel {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+      padding: 20px 24px;
+      gap: 16px;
+
+      .title {
+        font-family: Proto Grotesk;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px;
+        color: $natural1;
+        margin: 0;
+
+      }
+
+      .tags {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+
+        .tag {
+          text-align: center;
+          font-feature-settings: 'clig' off, 'liga' off;
+          font-family: Roboto;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 20px;
+          color: $natural1;
+          border-radius: 6px;
+          padding: 2px 6px;
+          background-color: $natural7;
+
+          &.green {
+            background-color: $success;
+            color: $natural8;
+          }
+        }
+
+        .link {
+          font-family: Suisse Intl;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 18px;
+          color: $link;
+        }
+      }
+
+      .list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        .item {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 4px;
+          font-family: Suisse Intl;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 18px;
+          color: #969FA8;
+        }
+      }
+    }
+  }
+
+  &__actions {
+    border: 1px solid $natural5;
+    border-top: 0;
+  }
+}

@@ -1,0 +1,78 @@
+.check {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  background-color: $natural7;
+  border-radius: 16px;
+
+  &__title {
+    font-family: Proto Grotesk;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    color: $natural1;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    .item {
+      display: flex;
+      flex-direction: row;
+
+      &__left {
+        flex: 1 1 auto;;
+
+        .title {
+          font-family: Suisse Intl;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 22px;
+          color: $natural1;
+        }
+
+        .subtitle {
+          font-family: Suisse Intl;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 18px;
+          color: $natural4
+        }
+      }
+
+      &__right {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-self: flex-start;
+        font-family: Suisse Intl;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+        color: $natural1;
+      }
+    }
+  }
+
+  hr {
+    width: 100%;
+  }
+
+  .sum {
+    display: flex;
+    flex-direction: row;
+
+    &__discount {
+
+    }
+
+    &__total {
+    }
+  }
+}

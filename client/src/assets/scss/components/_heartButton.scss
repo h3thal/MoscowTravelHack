@@ -1,0 +1,55 @@
+.button-heart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  appearance: none;
+  background-color: $natural7;
+  border-radius: 12px;
+  transition: .35s ease-in-out;
+  cursor: pointer;
+
+  &.m {
+    height: 36px;
+    width: 36px;
+
+    img {
+      height: 20px;
+      width: 20px;
+    }
+
+  }
+
+  &.l {
+    height: 48px;
+    width: 48px;
+
+    img {
+      height: 24px;
+      width: 24px;
+    }
+  }
+
+  &:hover {
+    background-color: $natural6;
+  }
+
+  &:active {
+    background-color: $natural5;
+  }
+
+  &.on-image {
+    background-color: $transparent30;
+    backdrop-filter: blur(4px);
+
+    &:hover {
+      background-color: $transparent15;
+    }
+
+    &:active {
+      background-color: $transparent50;
+    }
+  }
+
+}

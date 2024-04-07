@@ -1,0 +1,215 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: $natural7;
+  max-width: 100%;
+  cursor: pointer;
+
+  &__photo {
+    width: 100%;
+    position: relative;
+
+    &:active {
+      cursor: grab;
+    }
+
+    img {
+      height: 220px;
+      width: 100%;
+      object-fit: cover;
+      background-size: cover;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .labels {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 28px;
+      z-index: 10;
+      padding: 16px;
+
+      &__left {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+
+        .item {
+          color: $natural8;
+          font-family: Suisse Intl;
+          font-size: 12px;
+          font-weight: 500;
+          line-height: 16px;
+          border-radius: 8px;
+          height: 40px;
+          width: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: $antique1;
+
+          img {
+            max-height: 100%;
+            max-width: 100%;
+            padding: 8px;
+          }
+
+          &.rating {
+            background-color: $success;
+          }
+
+          &.discount {
+            font-size: 16px;
+            width: auto;
+            padding-inline: 4px;
+            color: #46001E;
+            position: relative;
+
+            span {
+              z-index: 1;
+            }
+
+            &:before {
+              content: '';
+              position: absolute;
+              top: 0;
+              left: 0;
+              height: 100%;
+              aspect-ratio: 1;
+              background-image: url('@/assets/images/heart-rounded.png');
+              background-repeat: no-repeat;
+            }
+          }
+        }
+      }
+
+      &__right {
+
+      }
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-inline: 16px;
+    padding-bottom: 16px;
+
+    .title {
+      font-family: Proto Grotesk;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      color: $natural1;
+    }
+
+    .tags {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+      column-gap: 8px;
+      row-gap: 4px;
+      font-family: Suisse Intl;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px;
+      color: $natural1;
+
+      &__type {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 4px;
+      }
+
+      &__geo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 4px;
+      }
+
+      &__time {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 4px;
+      }
+
+      &__list {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 4px;
+      }
+    }
+
+    .info {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      font-family: Suisse Intl;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px;
+
+
+      &__left {
+        display: flex;
+        flex-direction: column;
+        color: $natural1;
+      }
+
+      &__right {
+        display: flex;
+        flex-direction: column;
+        color: $success;
+      }
+    }
+
+    .actions {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 40px;
+
+      &:has(.tags) {
+        .button {
+          width: unset;
+          padding-inline: 35px;
+        }
+      }
+
+      .tags {
+        display: flex;
+        flex-direction: row;
+        gap: 4px;
+        font-family: Suisse Intl;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+        color: $natural1;
+      }
+
+      .button {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  }
+}
