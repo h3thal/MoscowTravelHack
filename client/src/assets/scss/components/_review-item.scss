@@ -1,0 +1,84 @@
+.review-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border: 1px solid $natural6;
+  background-color: $natural8;
+  padding: 16px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+
+    .rating {
+      font-family: Suisse Intl;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px; /* 150% */
+      border-radius: 8px;
+      padding: 4px 12px;
+      color: $natural8;
+      background-color: $success;
+    }
+
+    .user {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      &__type {
+        font-family: Suisse Intl;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+        color: $natural1;
+      }
+
+      &__name {
+        font-family: Suisse Intl;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+        color: $natural3;
+      }
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    p.msg {
+      font-family: Suisse Intl;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22px;
+      color: $natural1;
+    }
+
+    a.link {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-family: Suisse Intl;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22px;
+      color: $link;
+
+      img {
+        margin-top: 3px;
+      }
+    }
+  }
+}

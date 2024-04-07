@@ -1,0 +1,89 @@
+footer.footer {
+  background-color: $natural1;
+  padding-top: 80px;
+
+  .footer__container {
+    @extend %wrapper;
+    display: flex;
+    flex-direction: column;
+
+    .body {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding-bottom: 40px;
+
+      .links {
+        display: flex;
+        flex-direction: row;
+        gap: 88px;
+        color: $natural8;
+        font-family: Suisse Intl;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+
+        span.label {
+          font-size: 14px;
+        }
+
+        &__contacts,
+        &__about {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+
+          a {
+            text-decoration: none;
+            color: $natural8;
+          }
+        }
+      }
+
+      .social {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+      }
+    }
+
+    hr {
+      height: 1px;
+      width: 100%;
+      border: 0.5px solid $transparentOnBlack15;
+    }
+
+    .bottom {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-block: 24px;
+
+      .dev {
+        pointer-events: none;
+        user-select: none;
+      }
+
+      .links {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 32px;
+
+        a {
+          font-family: Suisse Intl;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 18px;
+          color: $natural8;
+          text-decoration: none;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+

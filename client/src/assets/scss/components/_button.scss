@@ -1,0 +1,150 @@
+.button {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 12px;
+  appearance: none;
+  background-color: unset;
+  font-family: Suisse Intl;
+  font-size: 16px;
+  font-weight: 500;
+  color: $natural1;
+  cursor: pointer;
+  transition: all .5s;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+
+  &.l {
+    font-size: 16px;
+    padding: 12px 16px 12px 16px;
+  }
+
+  &.m {
+    font-size: 14px;
+    padding: 8px 12px 8px 12px;
+  }
+
+  &.s {
+    font-size: 14px;
+    padding: 6px 8px 6px 8px;
+  }
+
+  &.caption {
+    background-color: #FFCF08;
+
+    &.l {
+      padding: 4px;
+    }
+
+    &:hover {
+      background-color: #E5B900;
+    }
+
+    &:active {
+      background-color: #CCA500;
+    }
+  }
+
+  &.primary {
+    background-color: #FFCF08;
+
+    &:hover {
+      background-color: #E5B900;
+    }
+
+    &:active {
+      background-color: #CCA500;
+    }
+  }
+
+  &.secondary {
+    background-color: $transparent15;
+    color: $natural6;
+
+    &:hover {
+      background-color: $transparent30;
+    }
+
+    &:active {
+      background-color: $transparent50;
+    }
+  }
+
+  &.secondary2 {
+    background-color: #FFF5CC;
+
+    &:hover {
+      background-color: #FFEB99;
+    }
+
+    &:active {
+      background-color: #FFEB99;
+      border-color: #E5B900;
+    }
+  }
+
+  &.thetriary {
+    background-color: #fff;
+
+    &:hover {
+      background-color: #FFF5CC;
+    }
+
+    &:active {
+      background-color: #FFEB99;
+    }
+
+    &.disabled {
+      background-color: unset !important;
+    }
+  }
+
+  &.outline {
+    border-color: #D9D9D9;
+
+    &:hover {
+      background-color: $natural7;
+      border-color: transparent;
+    }
+
+    &:active {
+      background-color: $natural6;
+      border-color: transparent;
+    }
+  }
+
+  &.outline-caption {
+  }
+
+  &.outline-yellow {
+    border-color: #FFCF08;
+
+    &:hover {
+      background-color: #FFF5CC;
+      border-color: transparent;
+    }
+
+    &:active {
+      background-color: #FFEB99;
+    }
+  }
+
+  .caption {
+    display: flex;
+    flex-direction: column;
+
+    span.first-line {
+
+    }
+
+    span.second-line {
+      font-size: 12px;
+      color: $transparent50;
+    }
+  }
+
+  .disabled {
+    background-color: $natural6;
+    color: $natural4;
+  }
+}

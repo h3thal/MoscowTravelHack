@@ -1,7 +1,26 @@
-@import "Fonts";
-@import "Mixins";
-@import "Variables";
-@import "components/Header";
+@import "fonts";
+@import "mixins";
+@import "variables";
+
+@import "components/header";
+@import "components/title";
+@import "components/tour";
+@import "components/card";
+@import "components/button";
+@import "components/album";
+@import "components/_not-included.scss";
+@import "components/tourProgram";
+@import "components/miniCard";
+@import "components/heartButton";
+@import "components/footer";
+@import "components/review";
+@import "components/review-item";
+@import "components/input";
+@import "components/search-bar";
+@import "components/accommodation-tour";
+@import "components/steps";
+@import "components/checkbox";
+@import "components/filters";
 
 body {
   margin: 0;

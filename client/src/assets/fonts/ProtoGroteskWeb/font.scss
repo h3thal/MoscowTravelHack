@@ -1,0 +1,35 @@
+@font-face {
+  font-family: Proto Grotesk;
+  src: local('Proto Grotesk Extra Light'), local('Proto-Grotesk-Extra-Light'),
+  url('ProtoGrotesk-ExtraLight.ttf') format('truetype'),
+  url('ProtoGrotesk-ExtraLight.otf') format('otf');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Proto Grotesk;
+  src: local('Proto Grotesk Light'), local('Proto-Grotesk-Light'),
+  url('ProtoGrotesk-Light.ttf') format('truetype'),
+  url('ProtoGrotesk-Light.otf') format('otf');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Proto Grotesk;
+  src: local('Proto Grotesk Regular'), local('Proto-Grotesk-Regular'),
+  url('ProtoGrotesk-Regular.otf') format('truetype'),
+  url('ProtoGrotesk-Regular.otf') format('otf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Proto Grotesk;
+  src: local('Proto Grotesk Bold'), local('Proto-Grotesk-Bold'),
+  url('ProtoGrotesk-Bold.otf') format('truetype'),
+  url('ProtoGrotesk-Bold.otf') format('otf');
+  font-weight: 700;
+  font-style: normal;
+}

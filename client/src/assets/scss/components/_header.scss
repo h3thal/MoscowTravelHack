@@ -3,7 +3,7 @@
   flex-direction: row;
   justify-content: space-between;
   @extend %wrapper;
-  padding: 12px 0;
+  padding-block: 12px;
 
   &__left {
     display: flex;

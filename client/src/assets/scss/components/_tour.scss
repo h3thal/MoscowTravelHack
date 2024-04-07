@@ -1,0 +1,157 @@
+.tour {
+  @extend %wrapper;
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &-left {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      .footer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+
+        .tag {
+          background-color: $success;
+        }
+
+        .top {
+          background-color: $natural7;
+          font-family: Suisse Intl;
+          font-size: 14px;
+          font-weight: 500;
+
+          span {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            color: $natural1;
+
+          }
+        }
+
+        &__review {
+          text-decoration: none;
+          color: $link;
+        }
+
+        &__reviews,
+        &__address,
+        &__dot,
+        &__nights {
+          font-family: Suisse Intl;
+          font-size: 16px;
+          font-weight: 400;
+          color: $natural4;
+        }
+
+        &__dot {
+          padding-bottom: 8px;
+          box-sizing: border-box;
+        }
+
+      }
+    }
+
+  }
+
+  &__like {
+    height: 42px;
+    width: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    background-color: $natural7;
+    cursor: pointer;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    width: 100%;
+
+    &:has(.filters.filters--hidden) {
+      flex-direction: column;
+
+      .content {
+        max-width: 100%;
+
+        .card {
+          max-width: calc(100% / 3 - 48px / 3);
+        }
+      }
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+      max-width: calc(100% - 288px);
+
+
+      &__description {
+        font-family: Suisse Intl;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: $natural1;
+      }
+
+      &__free-time {
+        h3.title {
+          color: $natural1;
+          font-family: Proto Grotesk;
+          font-size: 32px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 36px;
+        }
+
+        .slider {
+          max-width: 100%;
+        }
+      }
+
+      .list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 24px;
+
+        .card {
+          max-width: calc(100% / 2 - 24px / 2);
+        }
+      }
+    }
+
+
+    .sidebar {
+      width: 288px;
+      display: flex;
+      flex-shrink: 0;
+    }
+  }
+}
+
+.partner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+
+  span {
+    font-family: Suisse Intl;
+    font-weight: 400;
+    font-size: 14px;
+    color: $natural4;
+  }
+}

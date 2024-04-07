@@ -1,0 +1,50 @@
+.steps {
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .dash {
+      height: 2px;
+      width: 14px;
+      background-color: $natural4;
+    }
+
+    .item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 8px;
+      font-family: Suisse Intl;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px;
+      color: $natural4;
+
+      &.item--active {
+        color: $natural1;
+
+        .item__step {
+          background-color: $cyber-yellow1;
+        }
+      }
+
+      &__step {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 32px;
+        width: 32px;
+        border-radius: 32px;
+        background-color: $natural7;
+        //background-color: $cyber-yellow1;
+      }
+
+      &__title {
+
+      }
+    }
+  }
+}

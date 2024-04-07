@@ -1,9 +1,143 @@
 @font-face {
   font-family: Suisse Intl;
-  src: url('suisseintl-medium.eot'); /* IE 9 Compatibility Mode */
-  src: url('suisseintl-medium.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
-  url('suisseintl-medium.woff2') format('woff2'), /* Super Modern Browsers */
-  url('suisseintl-medium.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
-  url('suisseintl-medium.ttf') format('truetype'), /* Safari, Android, iOS */
-  url('suisseintl-medium.svg#suisseintl-medium') format('svg'); /* Chrome < 4, Legacy iOS */
+  font-weight: 100;
+  font-style: normal;
+  src: local('Suisse Intl Thin'), local('Suisse-Intl-Thin'),
+  url('SuisseIntl-Thin.otf') format('opentype');
+}
+
+@font-face {
+  font-family: Suisse Intl;
+  font-weight: 100;
+  font-style: italic;
+  src: local('Suisse Intl Thin Italic'), local('Suisse-Intl-Thin-Italic'),
+  url('SuisseIntl-ThinItalic.otf') format('opentype');
+}
+
+@font-face {
+  font-family: Suisse Intl;
+  font-weight: 200;
+  font-style: normal;
+  src: local('Suisse Intl Ultra Light'), local('Suisse-Intl-Ultra-Light'),
+  url('SuisseIntl-Ultralight.otf') format('opentype');
+}
+
+@font-face {
+  font-family: Suisse Intl;
+  font-weight: 200;
+  font-style: italic;
+  src: local('Suisse Intl Ultra Light Italic'), local('Suisse-Intl-Ultra-Light-Italic'),
+  url('SuisseIntl-UltralightItalic.otf') format('opentype');
+}
+
+@font-face {
+  font-family: Suisse Intl;
+  font-weight: 300;
+  font-style: normal;
+  src: local('Suisse Intl Light'), local('Suisse-Intl-Light'),
+  url('SuisseIntl-Light.otf') format('opentype');
+}
+
+@font-face {
+  font-family: Suisse Intl;
+  font-weight: 300;
+  font-style: italic;
+  src: local('Suisse Intl Light Italic'), local('Suisse-Intl-Light-Italic'),
+  url('SuisseIntl-LightItalic.otf') format('opentype');
+}
+
+@font-face {
+  font-family: Suisse Intl;
+  font-weight: 400;
+  font-style: normal;
+  src: local('Suisse Intl Regular'), local('Suisse-Intl-Regular'),
+  url('SuisseIntl-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: Suisse Intl;
+  font-weight: 400;
+  font-style: italic;
+  src: local('Suisse Intl Regular Italic'), local('Suisse-Intl-Regular-Italic'),
+  url('SuisseIntl-RegularItalic.otf') format('opentype');
+}
+
+@font-face {
+  font-family: Suisse Intl;
+  font-weight: 500;
+  font-style: normal;
+  src: local('Suisse Intl Medium'), local('Suisse-Intl-Medium'),
+  url('SuisseIntl-Medium.otf') format('opentype');
+}
+
+@font-face {
+  font-family: Suisse Intl;
+  font-weight: 500;
+  font-style: italic;
+  src: local('Suisse Intl Medium Italic'), local('Suisse-Intl-Medium-Italic'),
+  url('SuisseIntl-MediumItalic.otf') format('opentype');
+}
+
+@font-face {
+  font-family: Suisse Intl;
+  font-weight: 600;
+  font-style: normal;
+  src: local('Suisse Intl Semi Bold'), local('Suisse-Intl-Semi-Bold'),
+  url('SuisseIntl-SemiBold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: Suisse Intl;
+  font-weight: 600;
+  font-style: italic;
+  src: local('Suisse Intl Semi Bold Italic'), local('Suisse-Intl-Semi-Bold-Italic'),
+  url('SuisseIntl-SemiBoldItalic.otf') format('opentype');
+}
+
+@font-face {
+  font-family: Suisse Intl;
+  font-weight: 700;
+  font-style: normal;
+  src: local('Suisse Intl Bold'), local('Suisse-Intl-Bold'),
+  url('SuisseIntl-Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: Suisse Intl;
+  font-weight: 700;
+  font-style: italic;
+  src: local('Suisse Intl Bold Italic'), local('Suisse-Intl-Bold-Italic'),
+  url('SuisseIntl-BoldItalic.otf') format('opentype');
+}
+
+@font-face {
+  font-family: Suisse Intl;
+  font-weight: 800;
+  font-style: normal;
+  src: local('Suisse Intl Bold'), local('Suisse-Intl-Bold'),
+  url('SuisseIntl-Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: Suisse Intl;
+  font-weight: 800;
+  font-style: italic;
+  src: local('Suisse Intl Bold Italic'), local('Suisse-Intl-Bold-Italic'),
+  url('SuisseIntl-BoldItalic.otf') format('opentype');
+}
+
+@font-face {
+  font-family: Suisse Intl;
+  font-weight: 900;
+  font-style: normal;
+  src: local('Suisse Intl Black'), local('Suisse-Intl-Black'),
+  url('SuisseIntl-Black.otf') format('opentype');
+}
+
+@font-face {
+  font-family: Suisse Intl;
+  font-weight: 900;
+  font-style: italic;
+  src: local('Suisse Intl Black Italic'), local('Suisse-Intl-Black-Italic'),
+  url('SuisseIntl-BlackItalic.otf') format('opentype');
 }
