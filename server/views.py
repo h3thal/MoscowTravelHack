@@ -1,8 +1,6 @@
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from django.forms import model_to_dict
 from rest_framework import filters
-from rest_framework.filters import SearchFilter
 from django_filters.rest_framework import DjangoFilterBackend
 
 from rest_framework import generics
@@ -11,25 +9,40 @@ from .serializer import tourSerializer
 from .function import filing
 
 
-# Create your views here.
+
+from rest_framework.pagination import PageNumberPagination
+from rest_framework.response import Response
+
+class customPagination(PageNumberPagination):
+    page_size= 2
+    page_size_query_param= 'page_size'
+    max_page_size=20
+
+    def get_paginated_response(self, data):
+        if str(self.get_next_link()) is not None:
+            a=str(self.get_next_link())[-1]
+        else:
+            a='null'
+        if str(self.get_previous_link()) is not None:
+            b=str(self.get_previous_link())[-1]
+        else:
+            b='null'
+        
+        return Response({
+            'count' : self.page.paginator.count,
+            'links' :{
+                'next' : a,
+                'previous' : self.get_previous_link()
+            },
+            'results' : data
+        })
+
 class tourAPIList(generics.ListAPIView):
     serializer_class= tourSerializer
     queryset = tour.objects.all()   
-   # filter_backends = [DjangoFilterBackend]=
-   # filterset_fields=['id' , 'country','accomodation','transportation']
+    pagination_class=customPagination
+   
 
-
-import os
-
-# This function can be used as a replacement for `open`
-# which will allow you to access files from the file.
-def open_relative(path, flag="r"):
-
-    # This builds the relative path by joining the current directory
-    # plus the current filename being executed.
-    relative_path = os.path.join(os.path.dirname(__file__), path)
-
-    return open(relative_path, flag) # return file handler
     
 class FilterAPIList(APIView):
     def get(self, request):

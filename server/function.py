@@ -1,5 +1,6 @@
 import os
 import json 
+from .models import tour
 
 def filing(file):
     a="static\_"
@@ -8,7 +9,13 @@ def filing(file):
         data = json.load(f)
         return data
 
-filing('filter.json') 
+def data_load():
+    with open('static\data.json','r', encoding='utf-8') as f:
+        data= json.load(f)
+    for record in data:
+        print (record)
+
+
 
 
 

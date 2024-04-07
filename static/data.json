@@ -1,0 +1,108 @@
+[
+    {
+        "id": 1,
+        "objectType": "TOUR",
+        "durationNights": 1,
+        "rating": 8.9,
+        "promo": false,
+        "popularity": 12.3,
+        "themes": [
+            "Тематические",
+            "Образовательные",
+            "Групповые"
+        ],
+        "title": "В Москву на один день по треку «Урбанистика»",
+        "type": "Тур",
+        "iscanbuy": true,
+        "price": "4290",
+        "destination": "Москва",
+        "hasAudioGuide": true,
+        "russpassRecomendation": true
+    },
+    {
+        "id": 2,
+        "objectType": "TOUR",
+        "durationNights": 1,
+        "rating": 8.1,
+        "promo": false,
+        "popularity": 13.0,
+        "themes": [
+            "Автобусные",
+            "Групповые",
+            "Тематические"
+        ],
+        "title": "Выходные в Новосибирске (2 дня)",
+        "type": "Тур",
+        "iscanbuy": true,
+        "price": "7100",
+        "destination": "Новосибирс",
+        "hasAudioGuide": true,
+        "russpassRecomendation": false
+    },
+    {
+        "id": 3,
+        "objectType": "TOUR",
+        "durationNights": 6,
+        "rating": 7.5,
+        "promo": false,
+        "popularity": 9.0,
+        "themes": [
+            "Автобусные",
+            "Экотуры",
+            "Обзорные",
+            "История",
+            "Групповые",
+            ""
+        ],
+        "title": "Притяжение Кавказа",
+        "type": "Тур",
+        "iscanbuy": true,
+        "price": "39900",
+        "destination": "Грозный",
+        "hasAudioGuide": false,
+        "russpassRecomendation": true
+    },
+    {
+        "id": 4,
+        "objectType": "TOUR",
+        "durationNights": 2,
+        "rating": 6.8,
+        "promo": true,
+        "popularity": 7.0,
+        "themes": [
+            "Автобусные",
+            "Тематические",
+            "Обзорные",
+            "Гастрономические"
+        ],
+        "title": "Гастрономический поезд в Удмуртию «Вкусно едем. Удмуртия угощает!»",
+        "type": "Тур",
+        "iscanbuy": true,
+        "price": "24000",
+        "destination": "Ижевск",
+        "hasAudioGuide": false,
+        "russpassRecomendation": true
+    },
+    {
+        "id": 5,
+        "objectType": "TOUR",
+        "durationNights": 2,
+        "rating": 6.5,
+        "promo": true,
+        "popularity": 9.0,
+        "themes": [
+            "Обзорные",
+            "История",
+            "Индивидуальные",
+            "Гастрономические",
+            "Групповые"
+        ],
+        "title": "PROстолицы. Два города — миллион впечатлений",
+        "type": "Тур",
+        "iscanbuy": true,
+        "price": "22000",
+        "destination": "Москва",
+        "hasAudioGuide": false,
+        "russpassRecomendation": false
+    }
+]
